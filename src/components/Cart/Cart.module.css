@@ -1,0 +1,12 @@
+.cart {
+    display: block;
+}
+
+.cart button {
+    border: none;
+    color: #fff;
+    background-color: hsl(26, 100%, 55%);
+    margin: 0.5em;
+    border-radius: 6px;
+
+}
