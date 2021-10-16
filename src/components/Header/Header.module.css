@@ -3,7 +3,23 @@
     margin: 1em auto;
 }
 
+
+
 .navbar-brand {
     font-size: 5.25rem;
-    
+}
+
+.badget {
+    background-color: hsl(26, 100%, 55%);
+    font-size: 12px;
+    width: 70%;
+    color: white;
+    font-weight: bolder;
+    margin-bottom: 0.3em;
+    border-radius: 2px;
+}
+
+
+.btn {
+    text-decoration: none !important;
 }

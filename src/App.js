@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Product from "./components/Product/Product";
 import Header from "./components/Header/Header";
-import './App.css';
-import Modal from './components/UI/Modal';
 import Cart from "./components/Cart/Cart";
+import CartProvider from "./store/CartProvider";
+
+import './App.css';
 
 const products = [
   {
@@ -30,18 +31,20 @@ function App() {
 
   return (
     <>
-      {showCart && <Cart hideCart={onHideCart} /> }
-      <Header  showCart={onShowCart}/>
-      <main>
-        <Product 
-        company={products[0].make} 
-        product={products[0].productName}
-        description={products[0].description}
-        discount={products[0].discount}
-        originalPrice={products[0].originalPrice}
-        currentPrice={products[0].currentPrice}
-        />
-      </main>
+      <CartProvider>
+        {showCart && <Cart hideCart={onHideCart} />}
+        <Header showCart={onShowCart} />
+        <main>
+          <Product
+            company={products[0].make}
+            product={products[0].productName}
+            description={products[0].description}
+            discount={products[0].discount}
+            originalPrice={products[0].originalPrice}
+            currentPrice={products[0].currentPrice}
+          />
+        </main>
+      </CartProvider>
     </>
   );
 }

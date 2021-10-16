@@ -1,7 +1,8 @@
 import { useState } from "react";
+
 import classes from './Form.module.css';
 
-const ProductForm = () => {
+const ProductForm = (props) => {
     const [quantity, setQuantity] = useState(0);
 
     const increaseQuantity = () => {
@@ -19,19 +20,14 @@ const ProductForm = () => {
         setQuantity(parseInt(e.target.value));
     }
 
-    const onAddToCart = (e) => {
-        e.preventDefault();
-        console.log('adding to cart');
-    }
-
     return (
-        <form onSubmit={onAddToCart}>
+        <form onSubmit={(e) => e.preventDefault()}>
             <span>
                 <button onClick={descreaseQuantity}> -</button>
                 <input value={quantity} onChange={inputHandler} type='number' />
                 <button onClick={increaseQuantity}>  + </button>
             </span>
-            <button className={classes.addCartButton} >Add to Cart</button>
+            <button onClick={props.addToCart} className={classes.addCartButton} >Add to Cart</button>
         </form>
     )
 }
