@@ -3,7 +3,6 @@ import Product from "./components/Product/Product";
 import Header from "./components/Header/Header";
 import Cart from "./components/Cart/Cart";
 import CartProvider from "./store/CartProvider";
-
 import './App.css';
 
 const products = [
@@ -35,14 +34,15 @@ function App() {
         {showCart && <Cart hideCart={onHideCart} />}
         <Header showCart={onShowCart} />
         <main>
-          <Product
-            company={products[0].make}
-            product={products[0].productName}
-            description={products[0].description}
-            discount={products[0].discount}
-            originalPrice={products[0].originalPrice}
-            currentPrice={products[0].currentPrice}
-          />
+          {products.map(product => {
+            return <Product key='1'
+              company={product.make}
+              product={product.productName}
+              description={product.description}
+              discount={product.discount}
+              originalPrice={product.originalPrice}
+              currentPrice={product.currentPrice} />
+          })}
         </main>
       </CartProvider>
     </>

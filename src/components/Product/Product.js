@@ -8,7 +8,7 @@ const Product = (props) => {
     const ctx = useContext(CartContext);
 
     const addToCartHandler = () => {
-        ctx.addToCart({product: props.product, description: props.description, originalPrice: props.originalPrice, discount: props.discount, price: props.currentPrice});
+        ctx.addToCart({id: Math.random(), product: props.product, description: props.description, originalPrice: props.originalPrice, discount: props.discount, price: props.currentPrice});
     }
 
     return (<>

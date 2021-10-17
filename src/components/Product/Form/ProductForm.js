@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import classes from './Form.module.css';
 
 const ProductForm = (props) => {
@@ -12,8 +11,7 @@ const ProductForm = (props) => {
     const descreaseQuantity = () => {
         setQuantity(previous => {
             return (previous <= 0 ? previous = 0 : previous = previous - 1)
-        }
-        )
+        })
     }
 
     const inputHandler = (e) => {
@@ -31,6 +29,5 @@ const ProductForm = (props) => {
         </form>
     )
 }
-
 
 export default ProductForm;
