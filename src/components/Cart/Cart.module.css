@@ -1,12 +1,15 @@
 .cart {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
 }
+
 
 .cart button {
     border: none;
-    color: #fff;
-    background-color: hsl(26, 100%, 55%);
-    margin: 0.5em;
-    border-radius: 6px;
-
+    background-color: #fff;
 }
+
+

@@ -1,0 +1,8 @@
+.item {
+    list-style-type: none;
+}
+
+.item p {
+    font-size: 17px;
+    text-align: center;
+}

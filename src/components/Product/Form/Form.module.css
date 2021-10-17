@@ -5,7 +5,7 @@ form {
   align-items: center;
   /* width: 90%; */
   max-width: 100%;
-  margin-top: 2em;
+  margin: 2em 0;
   height: 80px;
 }
 
@@ -17,6 +17,7 @@ form span {
   background-color: hsl(223, 64%, 98%);
   margin-bottom: 1.1em;
   border-radius: 9px;
+  width: 80%;
 }
 
 input::-webkit-outer-spin-button,
@@ -44,32 +45,30 @@ form button {
 }
 
 .addCartButton {
-  width: 82%;
   background-color: hsl(26, 100%, 55%);
   border: none;
-  border-radius: 12px;
-  height: 40%;
+  border-radius: 8px;
   color: white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
+  width: 100%;
 }
 
 
 @media (min-width: 767px) {
   form {
-    width: 100%;
+    width: 80%;
     height: 70px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
   }
 
   form span {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 45%;
+    width: 43%;
     height: 100%;
   }
   
@@ -77,13 +76,10 @@ form button {
     width: 60%;
   }
 
-  form button {
-    width: 20%;
-  }
-  
+
   .addCartButton {
-    width: 46%;
-    height: 199%;
+    /* width: 46%; */
+    height: 90%;
     color: white;
     font-weight: bold;
     max-height: 100%;

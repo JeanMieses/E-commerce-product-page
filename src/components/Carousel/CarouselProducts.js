@@ -7,10 +7,10 @@ import image4 from './../../assets/image-product-4.jpg';
 import './Carousel.module.css'
 
 const CarouselProduct = () => {
-    return (<Carousel className=''>
+    return (<Carousel>
         <Carousel.Item>
             <img
-                className="d-block w-100"
+                className="img-fluid d-block w-100"
                 src={image1}
                 alt="First slide"
             />
@@ -18,7 +18,7 @@ const CarouselProduct = () => {
 
         <Carousel.Item>
             <img
-                className="d-block w-100"
+                className="img-fluid d-block w-100"
                 src={image2}
                 alt="Second slide"
             />
@@ -26,7 +26,7 @@ const CarouselProduct = () => {
 
         <Carousel.Item>
             <img
-                className="d-block w-100"
+                className="img-fluid d-block w-100"
                 src={image3}
                 alt="Third slide"
             />
@@ -34,7 +34,7 @@ const CarouselProduct = () => {
 
         <Carousel.Item>
             <img
-                className="d-block w-100"
+                className="img-fluid d-block w-100"
                 src={image4}
                 alt="Third slide"
             />

@@ -7,10 +7,15 @@ const CartProvider = (props) => {
     const addToCart = (item) => {
         setItems(previous => [...previous, item])
     }
+    
+    const removeFromCart = () => {
+        setItems([])
+    }
 
     const cartContext = {
         items: items,
-        addToCart: addToCart
+        addToCart: addToCart,
+        removeFromCart: removeFromCart
     }
 
     return <CartContext.Provider value={cartContext}>

@@ -8,19 +8,20 @@ const Cart = (props) => {
     const ctx = useContext(CartContext);
     return <Modal hideCart={props.hideCart} >
         {ctx.items.length === 0 ? <p>Cart is empty</p> :
-            <ul>{
+            <ul className={classes.cart} >{
                 ctx.items.map(item => {
                     return <CartItems
                         key={item.id}
+                        id={item.id}
                         product={item.product}
                         price={item.price}
-                        quantity={3} />
+                        quantity={item.quantity} />
                 })
             }
             </ul>
         }
-        <button onClick={props.hideCart} >Cancel</button>
-        {ctx.items.length === 0 ? '' : <button>Checkout</button>}
+        <button onClick={props.hideCart}> {ctx.items.length === 0? 'Close' : 'Cancel'} </button>
+        {ctx.items.length === 0 ? '' : <button onClick={props.hideCart}>Checkout</button>}
     </Modal>
 }
 

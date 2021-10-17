@@ -31,7 +31,7 @@ function App() {
   return (
     <>
       <CartProvider>
-        {showCart && <Cart hideCart={onHideCart} />}
+        {showCart && <Cart hideCart={onHideCart}/>}
         <Header showCart={onShowCart} />
         <main>
           {products.map(product => {

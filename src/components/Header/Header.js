@@ -3,10 +3,8 @@ import CartContext from '../../store/cart-context';
 import {Button, Navbar, Nav } from 'react-bootstrap';
 import iconCart from './../../assets/icon-cart.svg';
 import classes from './Header.module.css';
-// import avatar from './../../assets/image-avatar.png';
 
 const Header = (props) => {
-
     const ctx = useContext(CartContext);
  
     return (<header className={classes.header}>
